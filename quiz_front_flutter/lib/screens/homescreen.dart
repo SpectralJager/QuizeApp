@@ -64,6 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Container(
                         width: 150,
                         height: 170,
+                        padding: EdgeInsets.symmetric(horizontal: 10,vertical: 13),
                         decoration: BoxDecoration(
                             gradient: LinearGradient(
                                 colors: [Color(0xffFD892A), Color(0xffF61A72)],
@@ -71,8 +72,58 @@ class _HomeScreenState extends State<HomeScreen> {
                                 end: Alignment.bottomRight),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20))),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Icon(
+                                  Icons.add_chart,
+                                  color: Color(0xffFFFDFF),
+                                  size: 50,
+                                )
+                              ],
+                            ),
+                            Text(
+                              "Some",
+                              style: TextStyle(
+                                color: Color(0xffFFFDFF),
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16
+                              ),
+                            ),
+                            Text(
+                              "Quiz",
+                              style: TextStyle(
+                                color: Color(0xffFFFDFF),
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.bold,
+                                fontSize: 24,
+                                height: 0.9
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.fromLTRB(0,3,0,0),
+                              width: double.infinity,
+                              height: 25,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  //print(10);
+                                },
+                                child: Text("Start",style: TextStyle(fontSize: 16,color: Color(0xffF61A72)),),
+                                style: ButtonStyle(
+                                  shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
+                                  backgroundColor: MaterialStateProperty.all(Color(0xffFFFDFF)),
+                                  elevation: MaterialStateProperty.all(10)
+                                  ),
+                            ))
+                        ],),
                       ),
                       Container(
+                        padding: EdgeInsets.symmetric(horizontal: 10,vertical: 13),
                         width: 150,
                         height: 150,
                         decoration: BoxDecoration(
@@ -82,15 +133,64 @@ class _HomeScreenState extends State<HomeScreen> {
                                 end: Alignment.bottomRight),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20))),
+                              child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Icon(
+                                  Icons.add_chart,
+                                  color: Color(0xffFFFDFF),
+                                  size: 50,
+                                )
+                              ],
+                            ),
+                            Text(
+                              "Some",
+                              style: TextStyle(
+                                color: Color(0xffFFFDFF),
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16
+                              ),
+                            ),
+                            Text(
+                              "Quiz",
+                              style: TextStyle(
+                                color: Color(0xffFFFDFF),
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.bold,
+                                fontSize: 24,
+                                height: 0.9
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.fromLTRB(0,3,0,0),
+                              width: double.infinity,
+                              height: 25,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  //print(10);
+                                },
+                                child: Text("Start",style: TextStyle(fontSize: 16,color: Color(0xffF61A72)),),
+                                style: ButtonStyle(
+                                  shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
+                                  backgroundColor: MaterialStateProperty.all(Color(0xffFFFDFF)),
+                                  elevation: MaterialStateProperty.all(10)
+                                  ),
+                            )
+                          )
+                        ],),
                       ),
                     ],
                   )
                 ],
               ),
             ),
-          )
+          ),
         ],
-      ),
-    );
+    ));
   }
 }
