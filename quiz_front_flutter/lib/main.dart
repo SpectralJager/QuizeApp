@@ -11,8 +11,13 @@ class Quizzler extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Quizzler",
-      home: HomeScreen(),
       debugShowCheckedModeBanner: false,
+      home: Navigator(
+        pages: [
+          MaterialPage(child: HomeScreen(), key: ValueKey('HomeScreen'),)
+        ],
+        onPopPage: (route, result) => route.didPop(result),  
+      ),
     );
   }
 }
